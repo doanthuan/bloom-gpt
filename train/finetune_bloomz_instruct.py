@@ -19,7 +19,7 @@ from transformers import AutoTokenizer, BloomForCausalLM
 
 def train(
     load_in_8bit: bool = True,
-    data_path: str = "./vi_merged.jsonl",
+    data_path: str = "./instruct_merged.jsonl",
     base_model: str = "bigscience/bloomz-7b1-mt",
     output_dir: str = "./bloomz-gpt",
     # base_model: str = "VietAI/gpt-j-6B-vietnamese-news",
