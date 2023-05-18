@@ -49,10 +49,10 @@ python finetune_bloomz_doctor.py \
 We can also tweak our hyperparameters:
 
 ```bash
-python finetune.py \
-    --base_model 'decapoda-research/llama-7b-hf' \
-    --data_path 'yahma/alpaca-cleaned' \
-    --output_dir './lora-alpaca' \
+python finetune_bloomz_instruct.py \
+    --base_model 'bigscience/bloomz-7b1-mt' \
+    --data_path 'instruct_merged.jsonl' \
+    --output_dir './bloomz-instruct' \
     --batch_size 128 \
     --micro_batch_size 4 \
     --num_epochs 3 \
