@@ -13,7 +13,7 @@ import shortuuid
 MODEL = "gpt-3.5-turbo"
 MODEL_ID = "gpt-3.5-turbo:20230327"
 # Replace 'your_api_key' with your actual API key
-openai.api_key = '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'
+openai.api_key = 'your_api_key'
 
 def get_answer(question_id: int, question: str, max_tokens: int):
     ans = {
