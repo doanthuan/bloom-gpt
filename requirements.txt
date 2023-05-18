@@ -1,0 +1,17 @@
+accelerate
+appdirs
+black
+black[jupyter]
+fire
+bitsandbytes
+datasets 
+loralib 
+sentencepiece
+git+https://github.com/huggingface/transformers.git
+git+https://github.com/huggingface/peft.git@64f63a7df2a02cfd144592d9aa9c871b59258c55
+gradio
+gsutil
+#pip install diffusers transformers accelerate scipy safetensors
+openai
+shortuuid
+ray

@@ -1,0 +1,80 @@
+{"question_id": 1, "text": "Làm thế nào tôi có thể cải thiện kỹ năng quản lý thời gian của mình?", "category": "generic", "lang": "vi"}
+{"question_id": 2, "text": "Những cách hiệu quả nhất để đối phó với căng thẳng là gì?", "category": "generic", "lang": "vi"}
+{"question_id": 3, "text": "Sự khác biệt chính giữa ngôn ngữ lập trình Python và JavaScript là gì?", "category": "generic", "lang": "vi"}
+{"question_id": 4, "text": "Làm thế nào tôi có thể tăng năng suất của mình khi làm việc tại nhà?", "category": "generic", "lang": "vi"}
+{"question_id": 5, "text": "Bạn có thể giải thích những điều cơ bản của điện toán lượng tử?", "category": "generic", "lang": "vi"}
+{"question_id": 6, "text": "Sự khác biệt giữa các nguồn protein dựa trên thực vật và động vật là gì?", "category": "generic", "lang": "vi"}
+{"question_id": 7, "text": "Làm thế nào tôi có thể phát triển các kỹ năng tư duy phê phán của mình?", "category": "generic", "lang": "vi"}
+{"question_id": 8, "text": "Những thách thức lớn mà ngành giáo dục phải đối mặt ngày nay là gì?", "category": "generic", "lang": "vi"}
+{"question_id": 9, "text": "Các yếu tố chính ảnh hưởng đến hành vi của người tiêu dùng là gì?", "category": "generic", "lang": "vi"}
+{"question_id": 10, "text": "Các chiến lược hiệu quả nhất để giải quyết xung đột tại nơi làm việc là gì?", "category": "generic", "lang": "vi"}
+{"question_id": 11, "text": "Một số ý nghĩa tiềm năng của việc sử dụng chai nhựa sử dụng một lần so với chai có thể tái sử dụng trên cả môi trường và sức khỏe con người là gì?", "category": "knowledge", "lang": "vi"}
+{"question_id": 12, "text": "Những yếu tố nào bạn sẽ xem xét khi thiết kế một hệ thống giao thông công cộng toàn diện và dễ tiếp cận?", "category": "knowledge", "lang": "vi"}
+{"question_id": 13, "text": "Làm thế nào các chính phủ có thể sử dụng các chính sách tài khóa và tiền tệ để chống suy thoái kinh tế?", "category": "knowledge", "lang": "vi"}
+{"question_id": 14, "text": "Làm thế nào để các rào cản ngôn ngữ và văn hóa ảnh hưởng đến cách mọi người giao tiếp và hình thành các mối quan hệ trong các xã hội đa văn hóa?", "category": "knowledge", "lang": "vi"}
+{"question_id": 15, "text": "Mô tả một kịch bản trong đó trí tuệ nhân tạo có thể được sử dụng để cải thiện chất lượng và hiệu quả của việc cung cấp dịch vụ chăm sóc sức khỏe.", "category": "knowledge", "lang": "vi"}
+{"question_id": 16, "text": "Giải thích quá trình chỉnh sửa gen bằng công nghệ CRISPR-CAS9 và thảo luận về các ứng dụng tiềm năng và ý nghĩa đạo đức của nó.", "category": "knowledge", "lang": "vi"}
+{"question_id": 17, "text": "Làm thế nào để tiêm chủng hoạt động để bảo vệ các cá nhân và cộng đồng khỏi các bệnh truyền nhiễm, và khả năng miễn dịch của bầy đàn là gì?", "category": "knowledge", "lang": "vi"}
+{"question_id": 18, "text": "Làm thế nào để các nền tảng truyền thông xã hội ảnh hưởng đến cách mọi người tiêu thụ và chia sẻ tin tức, và những tác động tiềm năng đối với sự lây lan của thông tin sai lệch là gì?", "category": "knowledge", "lang": "vi"}
+{"question_id": 19, "text": "Làm thế nào để các yếu tố văn hóa, xã hội và kinh tế ảnh hưởng đến lựa chọn thực phẩm của mọi người và làm thế nào kiến thức này có thể được sử dụng để thúc đẩy chế độ ăn uống lành mạnh hơn?", "category": "knowledge", "lang": "vi"}
+{"question_id": 20, "text": "Giải thích quá trình chọn lọc tự nhiên và cách nó góp phần vào sự tiến hóa và thích nghi của các loài.", "category": "knowledge", "lang": "vi"}
+{"question_id": 21, "text": "Làm thế nào bạn sẽ giới thiệu bản thân như một hiệp sĩ thời trung cổ tại một bữa tiệc hoàng gia?", "category": "roleplay", "lang": "vi"}
+{"question_id": 22, "text": "Là một đội trưởng cướp biển, bạn sẽ nói gì với phi hành đoàn của bạn để thúc đẩy họ tìm kiếm kho báu ẩn giấu?", "category": "roleplay", "lang": "vi"}
+{"question_id": 23, "text": "Nếu bạn là một nhân vật Shakespearean, bạn sẽ tuyên bố tình yêu của mình với một người trong một bản độc thoại như thế nào?", "category": "roleplay", "lang": "vi"}
+{"question_id": 24, "text": "Là một siêu anh hùng, bạn sẽ giải thích câu chuyện gốc của mình như thế nào cho một đứa trẻ tò mò?", "category": "roleplay", "lang": "vi"}
+{"question_id": 25, "text": "Hãy tưởng tượng bạn là một khách du lịch thời gian từ năm 3000. Bạn sẽ nói với mọi người về những tiến bộ công nghệ nào?", "category": "roleplay", "lang": "vi"}
+{"question_id": 26, "text": "Là một nhà bình luận thể thao, mô tả vở kịch chiến thắng trong những giây cuối cùng của một trò chơi vô địch.", "category": "roleplay", "lang": "vi"}
+{"question_id": 27, "text": "Giả vờ là một đầu bếp nổi tiếng thế giới.Làm thế nào bạn sẽ mô tả món ăn chữ ký của bạn cho một hội đồng thẩm phán?", "category": "roleplay", "lang": "vi"}
+{"question_id": 28, "text": "Bạn là một người leo núi lên đỉnh núi Everest.Mô tả cảm xúc của bạn và quan điểm từ đầu.", "category": "roleplay", "lang": "vi"}
+{"question_id": 29, "text": "Là một thực dân không gian trên Sao Hỏa, hãy mô tả cuộc sống hàng ngày của bạn và những thách thức bạn gặp phải khi sống trên một hành tinh khác.", "category": "roleplay", "lang": "vi"}
+{"question_id": 30, "text": "Giả vờ là một nhân vật trong một thế giới hậu tận thế.Mô tả cách bạn tồn tại và các đồng minh bạn gặp phải.", "category": "roleplay", "lang": "vi"}
+{"question_id": 31, "text": "Làm thế nào bạn có thể xác định xem một nhà hàng có phổ biến đối với người dân địa phương hay chủ yếu thu hút khách du lịch hay không, và tại sao thông tin này có thể hữu ích?", "category": "common-sense", "lang": "vi"}
+{"question_id": 32, "text": "Một số manh mối tinh tế cho thấy ai đó đang giả vờ hiểu một chủ đề hoặc cuộc trò chuyện khi họ thực sự bối rối hoặc không hiểu biết là gì?", "category": "common-sense", "lang": "vi"}
+{"question_id": 33, "text": "Tại sao ai đó có thể chọn sử dụng bản đồ giấy hoặc yêu cầu chỉ đường thay vì dựa vào thiết bị GPS hoặc ứng dụng điện thoại thông minh?", "category": "common-sense", "lang": "vi"}
+{"question_id": 34, "text": "Làm thế nào bạn có thể xác định xem một người có thực sự quan tâm đến một cuộc trò chuyện hay đơn giản là lịch sự?", "category": "common-sense", "lang": "vi"}
+{"question_id": 35, "text": "Tại sao ai đó có thể thích mua sắm tại một doanh nghiệp nhỏ, thuộc sở hữu địa phương thay vì một cửa hàng chuỗi lớn, ngay cả khi giá cao hơn?", "category": "common-sense", "lang": "vi"}
+{"question_id": 36, "text": "Làm thế nào bạn có thể đánh giá độ tin cậy của một nguồn thông tin, chẳng hạn như một bài viết tin tức hoặc bài đăng trên blog, mà không chỉ dựa vào danh tiếng của tác giả hoặc nhà xuất bản?", "category": "common-sense", "lang": "vi"}
+{"question_id": 37, "text": "Tại sao một số người thích cảm giác sợ hãi, chẳng hạn như bằng cách xem phim kinh dị hoặc đi trên tàu lượn siêu tốc, trong khi những người khác tránh những trải nghiệm này?", "category": "common-sense", "lang": "vi"}
+{"question_id": 38, "text": "Làm thế nào để quan sát hành vi của người khác trong một tình huống xã hội cung cấp manh mối về các chuẩn mực và kỳ vọng văn hóa?", "category": "common-sense", "lang": "vi"}
+{"question_id": 39, "text": "Chúng ta có nghĩa vụ đạo đức để khám phá không gian, hay chúng ta nên tập trung vào việc giải quyết các vấn đề của Trái đất trước?", "category": "common-sense", "lang": "vi"}
+{"question_id": 40, "text": "Trong một thế giới nơi tự động hóa ngày càng trở nên phổ biến, điều quan trọng hơn là ưu tiên tạo việc làm hoặc tiến bộ công nghệ?", "category": "common-sense", "lang": "vi"}
+{"question_id": 41, "text": "Đã bao nhiêu lần nhấp nháy con người trung bình trong đời?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 42, "text": "Có bao nhiêu nguyên tử trong một hạt muối?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 43, "text": "Có bao nhiêu cuộc tấn công sét xảy ra trên trái đất mỗi ngày?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 44, "text": "Sẽ mất bao nhiêu quả bóng để nâng một ngôi nhà như trong phim \"UP\"?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 45, "text": "Có bao nhiêu tin nhắn văn bản được gửi trên toàn cầu trong một phút?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 46, "text": "Có bao nhiêu từ được nói hàng ngày trên trái đất?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 47, "text": "Có bao nhiêu bông tuyết rơi trong một mùa đông điển hình?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 48, "text": "Có bao nhiêu trang trong tất cả các cuốn sách từng được viết?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 49, "text": "Trái đất đã quay quanh mặt trời bao nhiêu lần kể từ khi bắt đầu cuộc sống?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 50, "text": "Có bao nhiêu bài hát đã được ghi lại trong suốt lịch sử?Cố gắng giải thích câu trả lời của bạn.Giải thích của bạn sẽ đưa người đọc qua từng bước lý luận của bạn.", "category": "fermi", "lang": "vi"}
+{"question_id": 51, "text": "Điều gì sẽ xảy ra nếu Internet đã được phát minh trong thời kỳ Phục hưng?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 52, "text": "Điều gì sẽ xảy ra nếu người Aztec đã đẩy lùi thành công những người chinh phục Tây Ban Nha?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 53, "text": "Điều gì sẽ xảy ra nếu cái chết đen không xảy ra vào thế kỷ 14?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 54, "text": "Điều gì sẽ xảy ra nếu Isaac Newton tập trung vào sinh học thay vì vật lý?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 55, "text": "Điều gì sẽ xảy ra nếu The Beatles chưa bao giờ thành lập như một ban nhạc?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 56, "text": "Điều gì sẽ xảy ra nếu Alan Turing không bẻ khóa mã Enigma trong Thế chiến II?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 57, "text": "Điều gì sẽ xảy ra nếu Kênh đào Suez chưa bao giờ được xây dựng?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 58, "text": "Điều gì sẽ xảy ra nếu nền văn minh Maya chưa bao giờ sụp đổ một cách bí ẩn?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 59, "text": "Điều gì sẽ xảy ra nếu Christopher Columbus không phát hiện ra Châu Mỹ?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 60, "text": "Điều gì sẽ xảy ra nếu Vincent Van Gogh là một nghệ sĩ thành công trong suốt cuộc đời của mình?", "category": "counterfactual", "lang": "vi"}
+{"question_id": 61, "text": "Phát triển chương trình C ++ đọc từng dòng tệp văn bản và đếm số lần xuất hiện của một từ cụ thể trong tệp.", "category": "coding", "lang": "vi"}
+{"question_id": 62, "text": "Thực hiện chức năng Python để tìm phần trăm chung dài nhất của hai chuỗi đầu vào bằng cách sử dụng lập trình động.", "category": "coding", "lang": "vi"}
+{"question_id": 63, "text": "Thực hiện một biểu thức chính quy trong Python để xác thực một địa chỉ email.", "category": "coding", "lang": "vi"}
+{"question_id": 64, "text": "Viết một chương trình để tìm số Fibonacci thứ n bằng cách sử dụng lập trình động.", "category": "coding", "lang": "vi"}
+{"question_id": 65, "text": "Thực hiện thuật toán tìm kiếm nhị phân để tìm một phần tử cụ thể trong một mảng được sắp xếp.", "category": "coding", "lang": "vi"}
+{"question_id": 66, "text": "Thực hiện cấu trúc dữ liệu hàng đợi bằng hai ngăn xếp trong Python.", "category": "coding", "lang": "vi"}
+{"question_id": 67, "text": "Thực hiện một chương trình để tìm các yếu tố phổ biến trong hai mảng mà không sử dụng bất kỳ cấu trúc dữ liệu bổ sung nào.", "category": "coding", "lang": "vi"}
+{"question_id": 68, "text": "Cho rằng f (x) = 5x^3 - 2x + 3, tìm giá trị của f (2).", "category": "math", "lang": "vi"}
+{"question_id": 69, "text": "Giải cho x trong phương trình 3x + 10 = 5 (x - 2).", "category": "math", "lang": "vi"}
+{"question_id": 70, "text": "Nếu các điểm cuối của một phân đoạn dòng là (2, -2) và (10, 4), độ dài của phân đoạn là bao nhiêu?", "category": "math", "lang": "vi"}
+{"question_id": 71, "text": "Bạn có thể giúp tôi viết một email chính thức cho một đối tác kinh doanh tiềm năng đề xuất một liên doanh không?", "category": "writing", "lang": "vi"}
+{"question_id": 72, "text": "Bạn có thể giúp tôi viết một lá thư từ chức cho chủ nhân hiện tại của tôi, trong khi để lại những điều khoản tốt và bày tỏ lòng biết ơn đối với các cơ hội được cung cấp?", "category": "writing", "lang": "vi"}
+{"question_id": 73, "text": "Sử dụng một định dạng thích hợp để cấu trúc một thư giới thiệu chính thức cho một sinh viên đăng ký vào một chương trình sau đại học uy tín về khoa học máy tính.", "category": "writing", "lang": "vi"}
+{"question_id": 74, "text": "Viết một email thông báo ra mắt sản phẩm hấp dẫn để thông báo cho khách hàng của chúng tôi về giải pháp phần mềm mới của chúng tôi.", "category": "writing", "lang": "vi"}
+{"question_id": 75, "text": "Dự thảo một email xin lỗi cho một khách hàng đã trải qua sự chậm trễ trong đơn đặt hàng của họ và đảm bảo rằng vấn đề đã được giải quyết.", "category": "writing", "lang": "vi"}
+{"question_id": 76, "text": "Viết một kịch bản cho một video YouTube khám phá lịch sử và ý nghĩa văn hóa của nhạc jazz.", "category": "writing", "lang": "vi"}
+{"question_id": 77, "text": "Sáng tác một bài đăng trên blog du lịch hấp dẫn về một chuyến đi gần đây đến Hawaii, làm nổi bật những trải nghiệm văn hóa và các điểm tham quan phải xem.", "category": "writing", "lang": "vi"}
+{"question_id": 78, "text": "Viết một đánh giá phim quyến rũ cho một bộ phim khoa học viễn tưởng được phát hành gần đây, thảo luận về cốt truyện, nhân vật và các hiệu ứng đặc biệt của nó.", "category": "writing", "lang": "vi"}
+{"question_id": 79, "text": "Cấu trúc một tập lệnh podcast cho một tập phim thảo luận về ảnh hưởng của các nền tảng phát trực tuyến đối với ngành công nghiệp âm nhạc.", "category": "writing", "lang": "vi"}
+{"question_id": 80, "text": "Viết đánh giá buổi hòa nhạc Symphony, thảo luận về màn trình diễn của dàn nhạc và trải nghiệm khán giả nói chung.", "category": "writing", "lang": "vi"}
