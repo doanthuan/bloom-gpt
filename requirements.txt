@@ -7,11 +7,13 @@ bitsandbytes
 datasets 
 loralib 
 sentencepiece
-git+https://github.com/huggingface/transformers.git
 git+https://github.com/huggingface/peft.git@64f63a7df2a02cfd144592d9aa9c871b59258c55
+git+https://github.com/huggingface/transformers.git@cd3e0211a6bbddee1067b55ab5d8eabd84edd68d
 gradio
 gsutil
 #pip install diffusers transformers accelerate scipy safetensors
+scipy
+safetensors
 openai
 shortuuid
 ray

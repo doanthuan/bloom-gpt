@@ -15,30 +15,43 @@ from peft import (  # noqa: E402
     set_peft_model_state_dict,
 )
 #from transformers import AutoTokenizer, AutoModelForCausalLM
-from transformers import AutoTokenizer, BloomForCausalLM 
+from transformers import LlamaForCausalLM, LlamaTokenizer
+
+from utils import make_supervised_data_module
+
+import gc
+import torch
+
+def flush():
+    gc.collect()
+    torch.cuda.empty_cache()
+
 
 def train(
     load_in_8bit: bool = True,
-    data_path: str = "./translated_health_200k.jsonl",
-    base_model: str = "bigscience/bloomz-7b1-mt",
-    output_dir: str = "./bloomz-doctor",
+    data_path: str = "HealthCareMagic-200k.jsonl",
+    base_model: str = "chavinlo/alpaca-native",
+    output_dir: str = "./alpaca-doctor",
 
     # training hyperparams
     batch_size: int = 128,
-    micro_batch_size: int = 8,
-    num_epochs: int = 2,
+    micro_batch_size: int = 16,
+    num_epochs: int = 1,
     learning_rate: float = 3e-4,
     cutoff_len: int = 256,
-    val_set_size: int = 500,
+    val_set_size: int = 0,
     # lora hyperparams
     lora_r: int = 8,
     lora_alpha: int = 16,
     lora_dropout: float = 0.05,
     #lora_target_modules: List[str] = ["q_proj", "v_proj"], # gpt-3
-    # lora_target_modules: List[str] = ["c_proj"], # gpt-2
+    lora_target_modules: List[str] = [
+        "q_proj",
+        "v_proj",
+    ],
     # llm hyperparams
     group_by_length: bool = False,  # faster, but produces an odd training loss curve
-    resume_from_checkpoint: str = None,  # either training checkpoint or final adapter
+    resume_from_checkpoint: str = "alpaca-doctor/checkpoint-300",  # either training checkpoint or final adapter
 ):
     if isinstance(lora_target_modules, str):
         lora_target_modules = lora_target_modules.split()
@@ -74,7 +87,7 @@ def train(
         gradient_accumulation_steps = gradient_accumulation_steps // world_size
     gradient_accumulation_steps = max(gradient_accumulation_steps, 1)
 
-    model = BloomForCausalLM.from_pretrained(
+    pre_model = LlamaForCausalLM.from_pretrained(
         base_model,
         load_in_8bit=load_in_8bit,
         torch_dtype=torch.float16,
@@ -82,7 +95,7 @@ def train(
     )
     # print(model.state_dict)
 
-    tokenizer = AutoTokenizer.from_pretrained(base_model)
+    tokenizer = LlamaTokenizer.from_pretrained(base_model)
     tokenizer.pad_token_id = 0 # unk. we want this to be different from the eos token
     tokenizer.padding_side = "left"  # Allow batched inference
 
@@ -109,22 +122,28 @@ def train(
         full_prompt = generate_prompt(data_point)
         return tokenize(full_prompt)
 
-    model = prepare_model_for_int8_training(model)
+    pre_model_8bit = prepare_model_for_int8_training(pre_model)
+    del pre_model
+    flush()
 
     config = LoraConfig(
         r=lora_r,
         lora_alpha=lora_alpha,
-        #target_modules=lora_target_modules,
+        target_modules=lora_target_modules,
         lora_dropout=lora_dropout,
+
         bias="none",
         task_type="CAUSAL_LM",
     )
-    model = get_peft_model(model, config)
+    model = get_peft_model(pre_model_8bit, config)
 
-    if data_path.endswith(".json") or data_path.endswith(".jsonl"):
-        data = load_dataset("json", data_files=data_path)
-    else:
-        data = load_dataset(data_path)
+    del pre_model_8bit
+    flush()
+
+    # if data_path.endswith(".json") or data_path.endswith(".jsonl"):
+    #     data = load_dataset("json", data_files=data_path)
+    # else:
+    #     data = load_dataset(data_path)
 
     if resume_from_checkpoint:
         # Check the available weights and load them
@@ -148,13 +167,15 @@ def train(
 
     model.print_trainable_parameters()  # Be more transparent about the % of trainable params.
 
-    if val_set_size > 0:
-        train_val = data["train"].train_test_split(test_size=val_set_size, shuffle=True, seed=42)
-        train_data = train_val["train"].shuffle().map(generate_and_tokenize_prompt)
-        val_data = train_val["test"].shuffle().map(generate_and_tokenize_prompt)
-    else:
-        train_data = data["train"].shuffle().map(generate_and_tokenize_prompt)
-        val_data = None
+    # if val_set_size > 0:
+    #     train_val = data["train"].train_test_split(test_size=val_set_size, shuffle=True, seed=42)
+    #     train_data = train_val["train"].shuffle().map(generate_and_tokenize_prompt)
+    #     val_data = train_val["test"].shuffle().map(generate_and_tokenize_prompt)
+    # else:
+    #     train_data = data["train"].shuffle().map(generate_and_tokenize_prompt)
+    #     val_data = None
+
+    data_module = make_supervised_data_module(tokenizer=tokenizer, data_path=data_path)
 
     if not ddp and torch.cuda.device_count() > 1:
         # keeps Trainer from trying its own DataParallelism when more than 1 gpu is available
@@ -172,8 +193,8 @@ def train(
             optim="adamw_torch",
             evaluation_strategy="steps" if val_set_size > 0 else "no",
             save_strategy="steps",
-            eval_steps=50 if val_set_size > 0 else None,
-            save_steps=50,
+            eval_steps=500 if val_set_size > 0 else None,
+            save_steps=300,
             output_dir=output_dir,
             save_total_limit=3,
             load_best_model_at_end=True if val_set_size > 0 else False,
@@ -185,8 +206,9 @@ def train(
 
     trainer = transformers.Trainer(
         model=model,
-        train_dataset=train_data,
-        eval_dataset=val_data,
+        # train_dataset=train_data,
+        # eval_dataset=val_data,
+        **data_module,
         args=training_args,
         data_collator=transformers.DataCollatorForSeq2Seq(
             tokenizer, pad_to_multiple_of=8, return_tensors="pt", padding=True
@@ -208,18 +230,27 @@ def train(
     model.save_pretrained(output_dir)
 
 
-def make_prompt(instruction):
-        return f"""Nếu bạn là bác sĩ, vui lòng trả lời các câu hỏi y tế dựa trên mô tả của bệnh nhân.
-
-### Instruction:
-{instruction}
-
-### Response:"""
-
 def generate_prompt(data_point):
-    question = data_point["input"].strip()
-    answer = data_point["output"].strip()
-    return f"{make_prompt(question)}\n{answer}"
+    # sorry about the formatting disaster gotta move fast
+    if data_point["input"]:
+        return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request. 
+
+                ### Instruction:
+                {data_point["instruction"]}
+                
+                ### Input:
+                {data_point["input"]}
+                
+                ### Response:
+                {data_point["output"]}""" # noqa: E501
+    else:
+        return f"""Below is an instruction that describes a task. Write a response that appropriately completes the request.  
+
+                ### Instruction:
+                {data_point["instruction"]}
+                
+                ### Response:
+                {data_point["output"]}""" # noqa: E501
 
 if __name__ == "__main__":
     fire.Fire(train)
