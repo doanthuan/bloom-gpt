@@ -49,7 +49,8 @@ def get_model_answers(base_model, lora_path, question_jsons, prompt_type):
         torch_dtype=torch.float16,
         device_map = {'': 0},
     )
-    model = PeftModel.from_pretrained(model, lora_path, device_map={'': 0})
+    if lora_path:
+        model = PeftModel.from_pretrained(model, lora_path, device_map={'': 0})
 
     ans_jsons = []
     for i, line in enumerate(tqdm(question_jsons)):
@@ -73,7 +74,7 @@ def get_model_answers(base_model, lora_path, question_jsons, prompt_type):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-model", type=str, required=True)
-    parser.add_argument("--lora-path", type=str, required=True)
+    parser.add_argument("--lora-path", type=str, default=None)
     parser.add_argument("--question-file", type=str, required=True)
     parser.add_argument("--answer-file", type=str, default="answer.jsonl")
     parser.add_argument("--prompt-type", type=int, default=1)
