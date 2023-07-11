@@ -21,26 +21,29 @@ def run_eval(base_model, lora_path, question_file, answer_file, prompt_type, num
     ans_handles = []
     for i in range(0, len(ques_jsons), chunk_size):
         ans_handles.append(
-            get_model_answers.remote(
-                base_model, lora_path, ques_jsons[i : i + chunk_size], prompt_type
-            )
+            # get_model_answers.remote(
+            #     base_model, lora_path, ques_jsons[i : i + chunk_size], prompt_type
+            # )
+            get_model_answers(base_model, lora_path, ques_jsons[i : i + chunk_size], prompt_type)
         )
 
     ans_jsons = []
     for ans_handle in ans_handles:
-        ans_jsons.extend(ray.get(ans_handle))
+        #ans_jsons.extend(ray.get(ans_handle))
+        ans_jsons.extend(ans_handle)
 
     with open(os.path.expanduser(answer_file), "w", encoding="utf-8") as ans_file:
         for line in ans_jsons:
             ans_file.write(json.dumps(line, ensure_ascii=False) + "\n")
 
 
-@ray.remote(num_gpus=1)
-@torch.inference_mode()
+#@ray.remote(num_gpus=1)
+#@torch.inference_mode()
 def get_model_answers(base_model, lora_path, question_jsons, prompt_type):
-    disable_torch_init()
+    #disable_torch_init()
 
-    lora_path = os.path.expanduser(lora_path)
+    if lora_path:
+        lora_path = os.path.expanduser(lora_path)
 
     tokenizer = AutoTokenizer.from_pretrained(base_model)
     model = AutoModelForCausalLM.from_pretrained(
@@ -81,7 +84,7 @@ if __name__ == "__main__":
     parser.add_argument("--num-gpus", type=int, default=1)
     args = parser.parse_args()
 
-    ray.init()
+    #ray.init()
     run_eval(
         args.base_model,
         args.lora_path,
