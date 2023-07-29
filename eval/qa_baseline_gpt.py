@@ -10,10 +10,12 @@ import openai
 import tqdm
 import shortuuid
 
-MODEL = "gpt-3.5-turbo"
-MODEL_ID = "gpt-3.5-turbo:20230327"
+MODEL = "gpt-4"
+MODEL_ID = "gpt-4-0613"
+# MODEL = "gpt-3.5-turbo"
+# MODEL_ID = "gpt-3.5-turbo:20230327"
 # Replace 'your_api_key' with your actual API key
-openai.api_key = 'your_api_key'
+openai.api_key = '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'
 
 def get_answer(question_id: int, question: str, max_tokens: int):
     ans = {
@@ -65,7 +67,7 @@ if __name__ == "__main__":
 
     answers = []
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=16) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
         futures = []
         for qid, question in questions_dict.items():
             future = executor.submit(get_answer, qid, question, args.max_tokens)
