@@ -5,7 +5,6 @@ import os
 import json
 from tqdm import tqdm
 import shortuuid
-import ray
 from peft import PeftModel
 from utils import evaluate, disable_torch_init, make_prompt_instruct, make_prompt_medical
 
