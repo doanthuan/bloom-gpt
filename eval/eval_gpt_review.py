@@ -17,7 +17,7 @@ MAX_API_RETRY = 5
 REQ_TIME_GAP = 1
 
 # Replace 'your_api_key' with your actual API key
-openai.api_key = 'your_api_key'
+openai.api_key = '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'
 
 
 #@ray.remote(num_cpus=4)

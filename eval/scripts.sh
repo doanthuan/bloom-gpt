@@ -3,6 +3,7 @@ python -m eval.qa_baseline_gpt -q eval/data/question_instruct.jsonl -o eval/data
 python -m eval.qa_baseline_gpt -q eval/data/question_doctor.jsonl -o eval/data/answer_gpt35_doctor.jsonl
 python -m eval.qa_baseline_gpt -q eval/data/question_instruct.jsonl -o eval/data/answer_gpt4_instruct.jsonl
 python -m eval.qa_baseline_gpt -q eval/data/question_doctor.jsonl -o eval/data/answer_gpt4_doctor.jsonl
+python -m eval.qa_baseline_gpt -q eval/data/question_doctor.jsonl -o eval/data/answer_gpt4_doctor.jsonl
 
 #get model answer (bloom)
 python -m eval.get_model_answer --base-model bigscience/bloomz-7b1-mt --lora-path models/bloomz-instruct --question-file eval/data/question_instruct.jsonl --answer-file eval/data/answer_bloomz_instruct.jsonl
