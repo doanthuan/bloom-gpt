@@ -80,9 +80,9 @@ python finetune_bloomz_instruct.py \
 
 ### Inference (`demo`)
 
-[Bloom-Chat demo](https://colab.research.google.com/drive/1MWQsvbanEwt6z4BLFq_BkYdM1WC6pEwA?usp=sharing):
+[Bloom-Chat demo](https://colab.research.google.com/drive/1MWQsvbanEwt6z4BLFq_BkYdM1WC6pEwA?usp=sharing)
 
-[Bloom-Doctor demo](https://colab.research.google.com/drive/1kiqlFQToWO40L4lGqM8i4UQsHZIJzaPt?usp=sharing):
+[Bloom-Doctor demo](https://colab.research.google.com/drive/1kiqlFQToWO40L4lGqM8i4UQsHZIJzaPt?usp=sharing)
 
 
 In demo directory also contains notebooks for a demo.
