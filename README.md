@@ -1,6 +1,17 @@
 # Bloom-GPT
 Instruction Tuning Large Language Model for Vietnamese
 
+
+The general architecture and experimental results of our method can be found in our [paper](https://arxiv.org/abs/2309.04646):
+
+    @InProceedings{,
+    title     = "{Efficient Finetuning Large Language Models For Vietnamese Chatbot}",
+    author    = {Vu-Thuan Doan, Quoc-Truong Truong, Duc-Vu Nguyen, Vinh-Tiep Nguyen and Thuy-Ngan Nguyen Luu},
+    booktitle = {In Proceedings of International Conference on Multimedia Analysis and Pattern Recognition (MAPR)},
+    year      = {2023},
+    pages     = "{to appear}"
+    }
+
 ### Setup Enviroment
 
 1. Install dependencies
@@ -69,6 +80,13 @@ python finetune_bloomz_instruct.py \
 
 ### Inference (`demo`)
 
-In demo directory contains notebooks for a demo.
+[Bloom-Chat demo](https://colab.research.google.com/drive/1MWQsvbanEwt6z4BLFq_BkYdM1WC6pEwA?usp=sharing):
+
+[Bloom-Doctor demo](https://colab.research.google.com/drive/1kiqlFQToWO40L4lGqM8i4UQsHZIJzaPt?usp=sharing):
+
+
+In demo directory also contains notebooks for a demo.
 
 ### Model weights
+
+LoRA weights are in models directory

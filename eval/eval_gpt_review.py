@@ -26,7 +26,8 @@ def get_eval(sys_prompt, user_prompt: str, max_tokens: int):
     for i in range(MAX_API_RETRY):
         try:
             response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+                #model="gpt-3.5-turbo",
+                model="gpt-4",
                 messages=[
                     {"role": "system", "content": sys_prompt},
                     {
